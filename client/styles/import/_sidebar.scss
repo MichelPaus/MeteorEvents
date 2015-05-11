@@ -1,0 +1,29 @@
+.nav-sidebar {
+	ul {
+		padding: 0;
+		li {
+			list-style: none;
+			padding: 5px 0 5px 40px;
+			position: relative;
+			.remove {
+				display: none;
+				position: absolute;
+				left: 20px;
+				top: 8px;
+				opacity: 0;
+				-webkit-transition: all .4s ease-out;
+				   -moz-transition: all .4s ease-out;
+				    -ms-transition: all .4s ease-out;
+				     -o-transition: all .4s ease-out;
+				        transition: all .4s ease-out;
+			}
+		}
+		li:hover {
+			.remove {
+				cursor: pointer;
+				display: block;
+				opacity: 1;
+			}
+		}
+	}
+}

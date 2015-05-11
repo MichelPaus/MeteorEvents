@@ -1,0 +1,48 @@
+<template name="home">
+	<div class="page-header">
+		<h1>Upcoming Events <small>{{countEvents}}</small></h1>
+	</div>
+	<div class="container">
+		<div class="col-sm-3">
+		    <nav class="nav-sidebar">
+				<h3>My Events</h3>
+				<ul>
+					{{#each myevents}}
+						{{> short}}
+					{{/each}}
+				</ul>
+			</nav>
+		</div>
+		<div class="container col-sm-9"> 
+			{{#each events}}
+				{{> list}}
+			{{/each}}
+		</div>
+	</div>
+</template>
+
+<template name="list">
+    <div class="col-md-3 event-thumb">
+        <a href="/event/:{{_id}}" class="thumbnail">
+            <div class="img"></div>
+            <h1>{{title}}</h1>
+        </a>
+        <p>{{content}}</p>
+        <div class="info">
+			<span class="date">{{formatDate date "short"}}</span>
+			{{#if isOwner}}
+				<span class="delete glyphicon glyphicon-remove"></span>
+			{{/if}}
+			<span class="attend glyphicon glyphicon-plus"></span>
+        </div>
+    </div>
+</template>
+
+<template name="short">
+	<li>
+		<a href="/event/:{{eventId}}">
+			{{eventTitle eventId}}
+		</a>
+		<span class="remove glyphicon glyphicon-remove"></span>
+	</li>
+</template>

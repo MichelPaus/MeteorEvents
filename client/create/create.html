@@ -1,0 +1,20 @@
+<template name="create">
+	<div class="page-header">
+		<h1>Create a new event <small>and let everyone know</small></h1>
+	</div>
+	<div class="container">
+		{{> insertEventForm}}
+	</div>
+</template>
+
+<template name="insertEventForm">
+	{{#autoForm collection="Events" id="insertEventForm" type="method" meteormethod="createEvent"}}
+    <fieldset>
+      <legend>Add an Event</legend>
+      {{> afQuickField name='title'}}
+      {{> afQuickField name='content' rows=6}}
+      {{> afQuickField name='date' type='bootstrap-datepicker' buttonClasses="glyphicon glyphicon-calendar"}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>

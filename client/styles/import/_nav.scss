@@ -1,0 +1,11 @@
+.navbar {
+	.navbar-center {
+		position: relative;
+		left: 50%;
+		-webkit-transform: translateX(-75%);
+		   -moz-transform: translateX(-75%);
+		    -ms-transform: translateX(-75%);
+		     -o-transform: translateX(-75%);
+		        transform: translateX(-75%);
+	}
+}
