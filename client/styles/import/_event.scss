@@ -1,0 +1,37 @@
+.event {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	.img {
+		background-color: #96FF98;
+		border-radius-top-left: 5px;
+		border-radius-top-right: 5px;
+		height: 240px;
+		margin: 0 -15px;
+		width: calc(100% + 30px);
+	}
+	.content {
+		h1 {
+			border-bottom: 1px solid #ccc;
+			color: rgba(0,0,0,0.54);
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+		.info {
+			color: rgba(0,0,0,0.87);
+			font-size: 0.9em;
+			font-weight: 300;
+			padding-bottom: 10px;
+			.right {
+				float: right;
+			}
+			.link:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+		p {
+			color: rgba(0,0,0,0.54);
+		}
+	}
+}

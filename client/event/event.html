@@ -1,14 +1,15 @@
 <template name="event">
-	<div class="page-header">
-		<h1>{{title}}</h1>
-	</div>
-	<div class="container">
-		<p>{{content}}</p>
-	</div>
-</template>
-
-<template name="notFound">
-	<div class="page-header">
-		<h1>Sorry, <small>we can't find the event you're looking for</small></h1>
+	<div class="container col-md-12">
+		<div class="col-md-6 col-md-push-3 event">
+			<div class="img"></div>
+			<div class="content">
+				<h1>{{title}}</h1>
+				<div class="info">
+					<span>Scheduled for {{formatDate date "short"}}</span>
+					<span class="link right">Add to My Events</span>
+				</div>
+				<p>{{content}}</p>
+			</div>
+		</div>
 	</div>
 </template>
